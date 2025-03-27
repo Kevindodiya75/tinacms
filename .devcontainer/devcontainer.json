@@ -1,26 +1,20 @@
 {
-    "name": "TinaCMS Hugo Starter",
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20",
-    
+    "name": "Tina CMS Hugo Starter",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
     "features": {
         "ghcr.io/devcontainers/features/hugo:1": {
             "version": "latest"
         }
     },
-    
     "customizations": {
         "vscode": {
             "extensions": [
                 "tamasfe.even-better-toml",
-                "yzhang.markdown-all-in-one",
-                "DavidAnson.vscode-markdownlint"
+                "davidanson.vscode-markdownlint",
+                "csstools.postcss"
             ]
         }
     },
-    
-    "postCreateCommand": "npm install -g pnpm && pnpm install",
-    
-    "forwardPorts": [1313],
-    
+    "postCreateCommand": "cd tina-hugo-starter && npm install && npm run dev",
     "remoteUser": "node"
-}   
+}
