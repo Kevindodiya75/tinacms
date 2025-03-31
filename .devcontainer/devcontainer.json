@@ -16,5 +16,6 @@
         }
     },
     "postCreateCommand": "cd tina-hugo-starter && pnpm install && pnpm run dev",
+    "forwardPorts": [1313, 4001],
     "remoteUser": "node"
 }
